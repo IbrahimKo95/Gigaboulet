@@ -14,7 +14,6 @@ class ArticleController extends Controller
             $article =  DB::table("article as a")
                 ->select("*")
                 ->join("category as c", "a.category_id", "=", "c.id")
-                ->join("variant as v", "a.id", "=", "v.article_id")
                 ->where("a.id", "=", $article_id)
                 ->where("v.color", "=", $color)
                 ->first();
@@ -22,7 +21,6 @@ class ArticleController extends Controller
             $article =  DB::table("article as a")
                 ->select("*")
                 ->join("category as c", "a.category_id", "=", "c.id")
-                ->join("variant as v", "a.id", "=", "v.article_id")
                 ->where("a.id", "=", $article_id)
                 ->first();
         }
