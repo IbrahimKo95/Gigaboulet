@@ -1,31 +1,63 @@
-<header>
-    <div class="w-[80vw] ml-auto mr-auto my-6">
-        <div class="flex justify-between pb-4">
-            <h1 class="text-4xl">
-                <a href="/">
-                    Gigaboulet</a>
-            </h1>
-            <form action="/" class="border-4 h-12 w-[26%] rounded-2xl bg-white text-xl flex box-border">
-                <input type="text" name="search" id="search" class="w-[85%] h-full ml-4 focus:outline-none">
-                <label for="search">
-                    <button class="w-[15%] mr-1 mt-1" name="search">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px">
-                            <path
-                                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z" />
-                        </svg>
-                    </button>
-                </label>
-            </form>
-        </div>
-        <div class="border-b-4"></div>
-        <nav class="mt-4 w-[60%] ml-auto mr-auto pb-4">
-            <ul class="flex justify-between text-xl">
-                <li><a href="/composant">Composant d'ordinateur</a></li>
-                <li><a href="/ordinateur-portable">Ordinateur portable</a></li>
-                <li><a href="/ordinateur-fixe">Ordinateur fixe</a></li>
-                <li><a href="/tablette">Tablette</a></li>
+<!-- Top Bar Nav -->
+<nav class="w-full py-4 bg-blue-800 shadow">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+
+        <nav>
+            <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
+                <li><a class="hover:text-gray-200 hover:underline px-4" href="#">Accueil</a></li>
+                <li><a class="hover:text-gray-200 hover:underline px-4" href="#">À propos</a></li>
             </ul>
         </nav>
-        <div class="border-b-4"></div>
+
+        <div class="flex items-center text-lg no-underline text-white pr-6">
+            <a class="" href="https://www.facebook.com/">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a class="pl-6" href="https://www.instagram.com/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a class="pl-6" href="https://www.twitter.com">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="pl-6" href="https://www.linkedin.com">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+
+</nav>
+
+<!-- Text Header -->
+<header class="w-full container mx-auto">
+    <div class="flex flex-col items-center py-12">
+        <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+            Gigaboulet
+        </a>
+        <p class="text-lg text-gray-600">
+            Lorem Ipsum Dolor Sit Amet
+        </p>
     </div>
 </header>
+
+<!-- Topic Nav -->
+<nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+    <div class="block sm:hidden">
+        <a
+            href="#"
+            class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+            @click="open = !open"
+        >
+            Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+        </a>
+    </div>
+    <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+        <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+            <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Technology</a>
+            <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Automotive</a>
+            <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Finance</a>
+            <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Politics</a>
+            <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Culture</a>
+            <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Sports</a>
+        </div>
+    </div>
+</nav>

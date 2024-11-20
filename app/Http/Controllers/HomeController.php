@@ -25,7 +25,7 @@ class HomeController extends Controller
                 ->select("*")
                 ->join("category as c", "a.category_id", "=", "c.id")
                 ->join("variant as v", "a.id", "=", "v.article_id")
-                ->get();
+                ->paginate(5);
         }
 
         return view('home', [
