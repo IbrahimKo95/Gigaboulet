@@ -1,50 +1,47 @@
 [
     {
-        "title": "Seagate IronWolf Pro 20 To (ST20000NE000)",
-        "information": "Disque dur 3.5` 20 To 7200 RPM 256 Mo Serial ATA 6 Gb/s pour NAS 512e (bulk)e",
-        "category": "composant",
-        "variant": [
-            {
-                "color": "noir",
-                "size": 111,
-                "price": "719.99",
-                "weight": 46,
-                "quantity": 10,
-                "fileName": "Seagate IronWolf Pro",
-                "url": "https://cdn.discordapp.com/attachments/973872783320817744/1052897388207022161/seagate.jpg"
-            }
-        ]
+        "title": "Les Révolutions de l’Intelligence Artificielle en 2024 selon Gigaboulet",
+        "information": "L’intelligence artificielle (IA) s’impose comme un pilier technologique de notre époque. Gigaboulet analyse les tendances et innovations qui redéfinissent notre quotidien.",
+        "developpement": "En 2024, l’IA générative comme ChatGPT ou DALL-E révolutionne la production de contenu et l’interaction client. Les secteurs de la médecine, grâce à l’IA, diagnostiquent plus rapidement et offrent des soins personnalisés. Gigaboulet explore également des cas d’utilisation concrets dans les industries du jeu vidéo et de l’éducation, où l’IA rend l’apprentissage plus interactif et efficace. Cependant, cette technologie n’est pas sans défis. Les enjeux éthiques et réglementaires, tels que la protection des données et la transparence des algorithmes, suscitent des débats. Gigaboulet propose des pistes pour tirer parti de l’IA tout en répondant à ces préoccupations.",
+        "conclusion": "L’intelligence artificielle redéfinit les standards technologiques. Gigaboulet continuera de couvrir ces évolutions majeures et d’accompagner ses lecteurs dans cette transformation numérique.",
+        "category": "intelligence artificielle",
+        "author": "Gigaboulet",
+        "published_at": "2024-11-01"
     },
     {
-        "title": "AMD Ryzen Threadripper PRO 5995WX (4.5 GHz Max.)",
-        "information": "Processeur 64-Core 128-Threads socket sWRX8 Cache 256 Mo 7 nm TDP 280W ",
-        "category": "composant",
-        "variant": [
-            {
-                "color": "noir",
-                "size": 111,
-                "price": "8699.99",
-                "weight": 46,
-                "quantity": 10,
-                "fileName": "AMD Ryzen Threadripper PRO",
-                "url": "https://cdn.discordapp.com/attachments/973872783320817744/1052897808497266688/AMD_ryzen_pro.jpg"
-            }
-        ]
+        "title": "Cybersécurité : Les Enjeux Cruciaux en 2024 selon Gigaboulet",
+        "information": "Face à l’augmentation des cyberattaques, la cybersécurité est devenue une priorité. Gigaboulet propose des solutions pour protéger vos données et votre vie numérique.",
+        "developpement": "Les ransomwares, attaques DDoS et phishing représentent les principales menaces en 2024. Gigaboulet recommande d’adopter des pratiques simples mais efficaces : mises à jour régulières, double authentification et outils de gestion des mots de passe. Par ailleurs, des technologies émergentes comme la blockchain offrent des solutions innovantes pour renforcer la sécurité, notamment grâce à leur transparence et leur résistance aux altérations. Enfin, l'article insiste sur l’importance de l’éducation à la cybersécurité pour éviter les pièges du quotidien, comme les liens malveillants ou les fichiers suspects.",
+        "conclusion": "Protéger ses données numériques est un impératif. Gigaboulet continuera de partager des conseils et des technologies pour garantir la sécurité de ses lecteurs dans un monde connecté.",
+        "category": "cybersécurité",
+        "author": "Gigaboulet",
+        "published_at": "2024-11-02"
     },
     {
-        "title": "PNY NVIDIA A16",
-        "information": "64 Go GDDR6 ECC - PCI Express 4.0 x16 (NVIDIA A16)",
-        "category": "composant",
-        "variant": [
-            {
-                "color": "noir",
-                "size": 111,
-                "price": "4599.99",
-                "weight": 46,
-                "quantity": 10,
-                "fileName": "PNY NVIDIA",
-                "url": "https://cdn.discordapp.com/attachments/973872783320817744/1052898461512650782/PNY_NVIDIA.jpg"
-            }
-        ]
+        "title": "La Réalité Augmentée : L’Avenir Numérique selon Gigaboulet",
+        "information": "La réalité augmentée (RA) transforme notre manière d’interagir avec le monde numérique. Gigaboulet explore ses applications révolutionnaires.",
+        "developpement": "La RA trouve des applications dans des secteurs variés, comme le commerce, où les essais virtuels simplifient l’expérience client, ou l’éducation, qui devient plus immersive grâce à des contenus interactifs. Gigaboulet explique comment des technologies comme les lunettes connectées et les smartphones équipés de RA ouvrent de nouvelles perspectives. Par ailleurs, les entreprises investissent massivement dans la RA pour optimiser la formation et la collaboration. Cependant, des défis persistent, comme l’accessibilité et les coûts de ces technologies, mais Gigaboulet propose des solutions pour démocratiser la RA.",
+        "conclusion": "La réalité augmentée est une révolution en marche. Gigaboulet continuera d’accompagner ses lecteurs pour explorer son potentiel et ses impacts sur notre quotidien.",
+        "category": "réalité augmentée",
+        "author": "Gigaboulet",
+        "published_at": "2024-11-03"
+    },
+    {
+        "title": "Les Réseaux 6G : Ce que Gigaboulet Prévoit pour l’Internet de Demain",
+        "information": "Alors que la 5G est encore en déploiement, la 6G commence déjà à émerger. Gigaboulet vous dévoile ses promesses.",
+        "developpement": "La 6G promet des vitesses de connexion dix fois supérieures à celles de la 5G, avec une latence quasi inexistante. Ces avancées ouvriront la voie à de nouvelles applications comme la téléchirurgie en temps réel ou des villes intelligentes hyperconnectées. Gigaboulet explore également les défis techniques de cette technologie, comme les infrastructures nécessaires et l’impact environnemental. Enfin, l’article présente les entreprises et institutions qui mènent la course à la 6G, offrant un aperçu des premiers déploiements prévus d’ici 2030.",
+        "conclusion": "La 6G redéfinira l’ère numérique. Gigaboulet continuera de suivre cette évolution pour en informer ses lecteurs en avant-première.",
+        "category": "réseaux",
+        "author": "Gigaboulet",
+        "published_at": "2024-11-04"
+    },
+    {
+        "title": "Les Véhicules Autonomes : Une Réalité en 2024 selon Gigaboulet",
+        "information": "Les véhicules autonomes ne sont plus de la science-fiction. Gigaboulet explore leurs avancées et les défis à relever.",
+        "developpement": "En 2024, des entreprises comme Tesla et Waymo multiplient les tests de véhicules autonomes. Gigaboulet met en avant les progrès réalisés en matière de capteurs, d’intelligence artificielle et de sécurité routière. Cependant, des obstacles subsistent : les réglementations, l’acceptation sociale et la nécessité d’infrastructures adaptées ralentissent leur adoption. L’article discute également des impacts positifs, comme la réduction des accidents liés à des erreurs humaines et l’amélioration de la mobilité pour les personnes à mobilité réduite.",
+        "conclusion": "Les véhicules autonomes sont en passe de transformer notre manière de nous déplacer. Gigaboulet continuera de suivre leur développement pour informer ses lecteurs.",
+        "category": "automobile",
+        "author": "Gigaboulet",
+        "published_at": "2024-11-05"
     }
 ]

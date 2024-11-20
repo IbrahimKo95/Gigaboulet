@@ -65,7 +65,6 @@
                 <p class="pt-2">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</p>
             </a>
         </div>
-
         <div class="w-full flex flex-col text-center md:text-left md:flex-row shadow bg-white mt-10 mb-10 p-6">
             <div class="w-full md:w-1/5 flex justify-center md:justify-start pb-4">
                 <img src="https://source.unsplash.com/collection/1346951/150x150?sig=1" class="rounded-full shadow h-32 w-32">

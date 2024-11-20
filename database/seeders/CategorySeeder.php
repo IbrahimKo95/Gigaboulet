@@ -12,7 +12,7 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        $catergories = ["composant", "ordinateur fixe", "ordinateur portable", "tablette"];
+        $catergories = ["intelligence artificielle", "cybersécurité", "réalité augmentée", "réseaux", "automobile"];
 
         foreach ($catergories as $category) {
             DB::table("category")->insert([

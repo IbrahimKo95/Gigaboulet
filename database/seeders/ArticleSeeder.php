@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class ArticleSeeder extends Seeder
 {
@@ -14,12 +15,7 @@ class ArticleSeeder extends Seeder
     {
         $articlesData = json_decode(file_get_contents(base_path('/database/datasets/file-composant.json')), true);
         $this->addArticle($articlesData);
-        $articlesData = json_decode(file_get_contents(base_path('/database/datasets/file-ordinateur-fixe.json')), true);
-        $this->addArticle($articlesData);
-        $articlesData = json_decode(file_get_contents(base_path('/database/datasets/file-ordinateur-portable.json')), true);
-        $this->addArticle($articlesData);
-        $articlesData = json_decode(file_get_contents(base_path('/database/datasets/file-tablette.json')), true);
-        $this->addArticle($articlesData);
+
     }
 
     private function addArticle($articlesData)
@@ -28,25 +24,16 @@ class ArticleSeeder extends Seeder
             $category = DB::table("category")->select("id")->where("name", $data["category"])->first();
             $article_id = DB::table("article")->insertGetId([
                 "title" => $data["title"],
-                "information" => $data["information"],
+                "slug" => Str::slug($data["title"], '-'),
+                "introduction" => $data["information"],
+                "developpement" => $data["developpement"],
+                "conclusion" => $data["conclusion"],
                 "category_id" => $category->id,
+                "author" => $data["author"],
+                "published_at" => $data["published_at"],
                 'updated_at' => now(),
-                'created_at' => now(),
+                'created_at' => now()
             ]);
-            foreach ($data["variant"] as $variant) {
-                DB::table("variant")->insert([
-                    "color" => $variant["color"],
-                    "size" => $variant["size"],
-                    "price" => $variant["price"],
-                    "weight" => $variant["weight"],
-                    "fileName" => $variant["fileName"],
-                    "quantity" => $variant["quantity"],
-                    "url" => $variant["url"],
-                    "article_id" => $article_id,
-                    'updated_at' => now(),
-                    'created_at' => now()
-                ]);
-            }
         }
     }
 }
