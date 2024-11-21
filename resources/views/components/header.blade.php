@@ -34,7 +34,7 @@
             Gigaboulet
         </a>
         <p class="text-lg text-gray-600">
-            Lorem Ipsum Dolor Sit Amet
+            Plongez au coeur de l'actualité technologique et des innovations.
         </p>
     </div>
 </header>
