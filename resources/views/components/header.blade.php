@@ -4,7 +4,7 @@
 
         <nav class="w-full md:w-auto">
             <ul class="flex items-center md:justify-between justify-center font-bold text-sm text-white uppercase no-underline">
-                <li><a class="hover:text-gray-200 hover:underline px-6 py-2" href="#">Accueil</a></li>
+                <li><a class="hover:text-gray-200 hover:underline px-6 py-2" href="{{route('home')}}">Accueil</a></li>
                 <li><a class="hover:text-gray-200 hover:underline px-6 py-2" style="min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center;" href="#">À propos</a></li>
             </ul>
         </nav>
@@ -34,7 +34,7 @@
 <!-- Text Header -->
 <header class="w-full container mx-auto">
     <div class="flex flex-col items-center py-12">
-        <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+        <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="{{route('home')}}">
             Gigaboulet
         </a>
         <p class="text-lg text-gray-600">
@@ -44,7 +44,7 @@
 </header>
 
 <!-- Topic Nav -->
-<nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+<nav class="w-full py-4 border-t border-b bg-gray-100">
     <div class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
         <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
             <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Technology</a>
