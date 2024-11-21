@@ -2,30 +2,33 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
-    public function index($article_id, $color = null): View
+    public function index($slug): View
     {
-        if ($color) {
-            $article =  DB::table("article as a")
-                ->select("*")
-                ->join("category as c", "a.category_id", "=", "c.id")
-                ->where("a.id", "=", $article_id)
-                ->where("v.color", "=", $color)
-                ->first();
-        } else {
-            $article =  DB::table("article as a")
-                ->select("*")
-                ->join("category as c", "a.category_id", "=", "c.id")
-                ->where("a.id", "=", $article_id)
-                ->first();
-        }
+        $article = Article::query()
+            ->where('slug', $slug)
+            ->firstOrFail();
+
+        $previous = Article::query()
+            ->where('published_at', '<', $article->published_at)
+            ->orderBy('published_at', 'desc')
+            ->first();
+
+        $next = Article::query()
+            ->where('published_at', '>', $article->published_at)
+            ->orderBy('published_at', 'asc')
+            ->first();
+
         return View("article", [
-            "article" => $article
+            "article" => $article,
+            "next" => $next,
+            "previous" => $previous
         ]);
     }
 }

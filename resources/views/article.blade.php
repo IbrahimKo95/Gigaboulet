@@ -35,32 +35,30 @@
 
         <article class="flex flex-col shadow my-4">
             <!-- Article Image -->
-            <a href="#" class="hover:opacity-75">
-                <img loading="lazy" src="">
-            </a>
             <div class="bg-white flex flex-col justify-start p-6">
-                <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{ $article->title }}</a>
-                <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</a>
+                <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{$article->category->name}}</a>
+                <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{$article->title}}</a>
                 <p href="#" class="text-sm pb-8">
-                    By <a href="#" class="font-semibold hover:text-gray-800">David Grzyb</a>, Published on April 25th, 2020
+                    Par <a href="#" class="font-semibold hover:text-gray-800"> {{$article->author}} </a>, Publié le {{$article->published_at}}
                 </p>
                 <h1 class="text-2xl font-bold pb-3">Introduction</h1>
-                <p class="pb-3">$article->getIntroduction()</p>
+                <p class="pb-3">{{$article->introduction}}</p>
                 <h1 class="text-2xl font-bold pb-3">Heading</h1>
-                <p class="pb-3">$article->getDeveloppement()</p>
+                <p class="pb-3">{{$article->developpement}}</p>
                 <h1 class="text-2xl font-bold pb-3">Conclusion</h1>
-                <p class="pb-3"></p>
+                <p class="pb-3">{{$article->conclusion}}</p>
             </div>
         </article>
 
         <div class="w-full flex pt-6">
-            <a href="#" class="w-1/2 bg-white shadow hover:shadow-md text-left p-6">
-                <p class="text-lg text-blue-800 font-bold flex items-center"><i class="fas fa-arrow-left pr-1"></i> Previous</p>
-                <p class="pt-2">$oldArticle->title</p>
+            <a @isset($previous) href="/article/{{$previous->slug}}" @endisset class="w-1/2 bg-white shadow hover:shadow-md text-left p-6">
+                <p class="text-lg text-blue-800 font-bold flex items-center"><i class="fas fa-arrow-left pr-1"></i> Précédent</p>
+                <p class="pt-2"> @isset($previous) {{$previous->title}} @else Aucun article précédent @endisset</p>
             </a>
-            <a href="#" class="w-1/2 bg-white shadow hover:shadow-md text-right p-6">
-                <p class="text-lg text-blue-800 font-bold flex items-center justify-end">Next <i class="fas fa-arrow-right pl-1"></i></p>
-                <p class="pt-2">$newArticle->title</p>
+
+            <a @isset($next) href="/article/{{$next->slug}}" @endisset class="w-1/2 bg-white shadow hover:shadow-md text-right p-6">
+                <p class="text-lg text-blue-800 font-bold flex items-center justify-end">Suivant <i class="fas fa-arrow-right pl-1"></i></p>
+                <p class="pt-2">@isset($next) {{$next->title}} @else Aucun article suivant @endisset</p>
             </a>
         </div>
     </section>
@@ -69,10 +67,10 @@
     <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
 
         <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-            <p class="text-xl font-semibold pb-5">About Us</p>
-            <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est eu odio sagittis tristique. Vestibulum ut finibus leo. In hac habitasse platea dictumst.</p>
+            <p class="text-xl font-semibold pb-5">À Propos</p>
+            <p class="pb-2">Apprenez en plus sur Gigaboulet</p>
             <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
-                Get to know us
+                Apprenez en plus
             </a>
         </div>
     </aside>

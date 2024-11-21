@@ -13,6 +13,7 @@ class Article extends Model
         'introduction',
         'developpement',
         'author',
+        'conclusion',
         'published_at',
     ];
 
