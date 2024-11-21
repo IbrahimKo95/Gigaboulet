@@ -4,26 +4,26 @@
 
         <nav>
             <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
-                <li><a class="hover:text-gray-200 hover:underline px-4" href="#">Accueil</a></li>
-                <li><a class="hover:text-gray-200 hover:underline px-4" href="#">À propos</a></li>
+                <li><a class="hover:text-gray-200 hover:underline px-6 py-2" href="#">Accueil</a></li>
+                <li><a class="hover:text-gray-200 hover:underline px-6 py-2" style="min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center;" href="#">À propos</a></li>
             </ul>
         </nav>
 
         <div class="flex items-center text-lg no-underline text-white pr-6">
-            <a class="p-2" href="https://www.facebook.com/">
-                <i class="fab fa-facebook"></i>
+            <a class="p-4 w-12 h-12 flex items-center justify-center" href="https://www.facebook.com/">
+                <i class="fab fa-facebook text-2xl"></i>
                 <p class="sr-only">Facebook</p>
             </a>
-            <a class="p-2" href="https://www.instagram.com/">
-                <i class="fab fa-instagram"></i>
+            <a class="p-4 w-12 h-12 flex items-center justify-center" href="https://www.instagram.com/">
+                <i class="fab fa-instagram text-2xl"></i>
                 <p class="sr-only">Instagram</p>
             </a>
-            <a class="p-2" href="https://www.twitter.com">
-                <i class="fab fa-twitter"></i>
+            <a class="p-4 w-12 h-12 flex items-center justify-center" href="https://www.twitter.com">
+                <i class="fab fa-twitter text-2xl"></i>
                 <p class="sr-only">Twitter</p>
             </a>
-            <a class="p-2" href="https://www.linkedin.com">
-                <i class="fab fa-linkedin"></i>
+            <a class="p-4 w-12 h-12 flex items-center justify-center" href="https://www.linkedin.com">
+                <i class="fab fa-linkedin text-2xl"></i>
                 <p class="sr-only">Linkedin</p>
             </a>
         </div>

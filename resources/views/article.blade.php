@@ -16,10 +16,9 @@
         }
     </style>
 
-    <!-- AlpineJS -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@3.14.3/dist/alpine.min.js" defer></script>
-    <!-- Font Awesome -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+<script rel="preconnect" src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js" defer></script>
+<script rel="preconnect" src="https://kit.fontawesome.com/b49e7cf498.js" crossorigin="anonymous" defer></script>
+
 </head>
 <body class="bg-white font-family-karla">
 
@@ -33,7 +32,7 @@
         <article class="flex flex-col shadow my-4" style="padding-left: 4%">
             <!-- Article Image -->
             <header class="bg-white flex flex-col justify-start p-6">
-                <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{$article->category->name}}</a>
+                <a href="/category" class="text-blue-700 text-sm font-bold uppercase pb-4">{{$article->category->name}}</a>
                 <h1 class="text-3xl font-bold pb-4" itemprop="headline">{{$article->title}}</h1>
                 <p class="text-sm pb-8">
                     Par <span class="font-bold" itemprop="author"> {{$article->author}} </span>, Publié le <time itemprop="datePublished" datetime="{{ $article->published_at }}">{{ $article->published_at }}</time>
@@ -48,15 +47,29 @@
         </article>
 
         <div class="w-full flex pt-6">
-            <a @isset($previous) href="/article/{{$previous->slug}}" @endisset class="w-1/2 bg-white shadow hover:shadow-md text-left p-6">
+            @isset($previous)
+            <a href="/article/{{$previous->slug}}" class="w-1/2 bg-white shadow hover:shadow-md text-left p-6">
                 <p class="text-lg text-blue-800 font-bold flex items-center"><i class="fas fa-arrow-left pr-1"></i> Précédent</p>
-                <p class="pt-2"> @isset($previous) {{$previous->title}} @else Aucun article précédent @endisset</p>
+                <p class="pt-2">{{$previous->title}}</p>
             </a>
+            @else
+            <span class="w-1/2 bg-white shadow text-left p-6">
+                <p class="text-lg text-blue-800 font-bold flex items-center"><i class="fas fa-arrow-left pr-1"></i> Précédent</p>
+                <p class="pt-2"> Aucun article précédent </p>
+            </span>
+            @endisset
 
-            <a @isset($next) href="/article/{{$next->slug}}" @endisset class="w-1/2 bg-white shadow hover:shadow-md text-right p-6">
+            @isset($next)
+            <a href="/article/{{$next->slug}}" class="w-1/2 bg-white shadow hover:shadow-md text-right p-6">
                 <p class="text-lg text-blue-800 font-bold flex items-center justify-end">Suivant <i class="fas fa-arrow-right pl-1"></i></p>
-                <p class="pt-2">@isset($next) {{$next->title}} @else Aucun article suivant @endisset</p>
+                <p class="pt-2">{{$next->title}}</p>
             </a>
+            @else
+            <span class="w-1/2 bg-white shadow hover:shadow-md text-right p-6">
+                <p class="text-lg text-blue-800 font-bold flex items-center justify-end">Suivant <i class="fas fa-arrow-right pl-1"></i></p>
+                <p class="pt-2"> Aucun article suivant</p>
+            </span>
+            @endisset
         </div>
     </section>
 
@@ -66,7 +79,7 @@
         <div class="w-full bg-white shadow flex flex-col my-4 p-6">
             <p class="text-xl font-semibold pb-5">À Propos</p>
             <p class="pb-2">Bienvenue sur Gigaboulet, votre blog dédié aux nouvelles technologies et à l’innovation. Notre objectif est simple : vous offrir une plateforme où vous pouvez découvrir, explorer et comprendre les avancées technologiques qui façonnent notre monde.</p>
-            <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
+            <a href="/a-propos" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
                 En savoir plus
             </a>
         </div>
