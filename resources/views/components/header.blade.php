@@ -5,7 +5,7 @@
         <nav class="w-full md:w-auto">
             <ul class="flex items-center md:justify-between justify-center font-bold text-sm text-white uppercase no-underline">
                 <li><a class="hover:text-gray-200 hover:underline px-6 py-2" href="{{route('home')}}">Accueil</a></li>
-                <li><a class="hover:text-gray-200 hover:underline px-6 py-2" style="min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center;" href="#">À propos</a></li>
+                <li><a class="hover:text-gray-200 hover:underline px-6 py-2" style="min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center;" href="/a-propos">À propos</a></li>
             </ul>
         </nav>
 
