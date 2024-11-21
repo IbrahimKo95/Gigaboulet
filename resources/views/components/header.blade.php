@@ -10,17 +10,21 @@
         </nav>
 
         <div class="flex items-center text-lg no-underline text-white pr-6">
-            <a class="" href="https://www.facebook.com/">
+            <a class="p-2" href="https://www.facebook.com/">
                 <i class="fab fa-facebook"></i>
+                <p class="sr-only">Facebook</p>
             </a>
-            <a class="pl-6" href="https://www.instagram.com/">
+            <a class="p-2" href="https://www.instagram.com/">
                 <i class="fab fa-instagram"></i>
+                <p class="sr-only">Instagram</p>
             </a>
-            <a class="pl-6" href="https://www.twitter.com">
+            <a class="p-2" href="https://www.twitter.com">
                 <i class="fab fa-twitter"></i>
+                <p class="sr-only">Twitter</p>
             </a>
-            <a class="pl-6" href="https://www.linkedin.com">
+            <a class="p-2" href="https://www.linkedin.com">
                 <i class="fab fa-linkedin"></i>
+                <p class="sr-only">Linkedin</p>
             </a>
         </div>
     </div>
