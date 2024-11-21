@@ -19,6 +19,29 @@
 <script rel="preconnect" src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js" defer></script>
 <script rel="preconnect" src="https://kit.fontawesome.com/b49e7cf498.js" crossorigin="anonymous" defer></script>
 
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{$article->title}}",
+        "description": "{{$article->introduction}}",
+        "author": {
+            "@type": "Person",
+            "name": "Gigaboulet"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Gigaboulet",
+        },
+        "datePublished": "{{$article->published_at}}T08:00:00+00:00",
+        "dateModified": "{{$article->published_at}}T09:00:00+00:00",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://gigaboulet.fr/article/{{$article->slug}}"
+        }
+    }
+</script>
+
 </head>
 <body class="bg-white font-family-karla">
 
