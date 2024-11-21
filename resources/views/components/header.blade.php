@@ -2,14 +2,14 @@
 <nav class="w-full py-4 bg-blue-800 shadow">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
 
-        <nav>
-            <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
+        <nav class="w-full md:w-auto">
+            <ul class="flex items-center md:justify-between justify-center font-bold text-sm text-white uppercase no-underline">
                 <li><a class="hover:text-gray-200 hover:underline px-6 py-2" href="#">Accueil</a></li>
                 <li><a class="hover:text-gray-200 hover:underline px-6 py-2" style="min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center;" href="#">À propos</a></li>
             </ul>
         </nav>
 
-        <div class="flex items-center text-lg no-underline text-white pr-6">
+        <div class="flex items-center justify-center md:justify-end text-lg no-underline text-white md:pr-6 w-full md:w-auto">
             <a class="p-4 w-12 h-12 flex items-center justify-center" href="https://www.facebook.com/">
                 <i class="fab fa-facebook text-2xl"></i>
                 <p class="sr-only">Facebook</p>
