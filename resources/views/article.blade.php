@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gigaboulet Article</title>
     <meta name="author" content="Gigaboulet">
-    <meta name="description" content="Article">
-
-    <!-- Tailwind -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
-
+    <meta name="description" content="Découvrez l'article '{{ $article->title }}' dans la catégorie {{ $article->category->name }}. Et apprenez en plus sur le sujet !">
+    <script rel="preload" src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" as="font" type="font/woff2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <style rel="preload">
         .font-family-karla {
-            font-family: karla;
+            font-family: karla, sans-serif;
         }
     </style>
 
     <!-- AlpineJS -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@3.14.3/dist/alpine.min.js" defer></script>
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
 </head>
@@ -27,27 +25,26 @@
 
 @include('components/header')
 
-
 <div class="container mx-auto flex flex-wrap py-6">
 
     <!-- Post Section -->
     <section class="w-full md:w-2/3 flex flex-col items-center px-3">
 
-        <article class="flex flex-col shadow my-4">
+        <article class="flex flex-col shadow my-4" style="padding-left: 4%">
             <!-- Article Image -->
-            <div class="bg-white flex flex-col justify-start p-6">
+            <header class="bg-white flex flex-col justify-start p-6">
                 <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{$article->category->name}}</a>
-                <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{$article->title}}</a>
-                <p href="#" class="text-sm pb-8">
-                    Par <a href="#" class="font-semibold hover:text-gray-800"> {{$article->author}} </a>, Publié le {{$article->published_at}}
+                <h1 class="text-3xl font-bold pb-4" itemprop="headline">{{$article->title}}</h1>
+                <p class="text-sm pb-8">
+                    Par <span class="font-bold" itemprop="author"> {{$article->author}} </span>, Publié le <time itemprop="datePublished" datetime="{{ $article->published_at }}">{{ $article->published_at }}</time>
                 </p>
-                <h1 class="text-2xl font-bold pb-3">Introduction</h1>
-                <p class="pb-3">{{$article->introduction}}</p>
-                <h1 class="text-2xl font-bold pb-3">Heading</h1>
-                <p class="pb-3">{{$article->developpement}}</p>
-                <h1 class="text-2xl font-bold pb-3">Conclusion</h1>
+            </header>
+                <h2 class="text-2xl font-bold pb-3">Introduction</h1>
+                <p class="pb-3" itemprop="description">{{$article->introduction}}</p>
+                <h2 class="text-2xl font-bold pb-3">Heading</h1>
+                <p class="pb-3" itemprop="description">{{$article->developpement}}</p>
+                <h2 class="text-2xl font-bold pb-3">Conclusion</h1>
                 <p class="pb-3">{{$article->conclusion}}</p>
-            </div>
         </article>
 
         <div class="w-full flex pt-6">
@@ -68,9 +65,9 @@
 
         <div class="w-full bg-white shadow flex flex-col my-4 p-6">
             <p class="text-xl font-semibold pb-5">À Propos</p>
-            <p class="pb-2">Apprenez en plus sur Gigaboulet</p>
+            <p class="pb-2">Bienvenue sur Gigaboulet, votre blog dédié aux nouvelles technologies et à l’innovation. Notre objectif est simple : vous offrir une plateforme où vous pouvez découvrir, explorer et comprendre les avancées technologiques qui façonnent notre monde.</p>
             <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
-                Apprenez en plus
+                En savoir plus
             </a>
         </div>
     </aside>
