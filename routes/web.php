@@ -7,6 +7,7 @@ use App\Http\Controllers\SitemapXmlController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name("home");
+Route::get('/importArticle/{mdp}', [HomeController::class, 'importArticle']);
 Route::view('/a-propos', 'about');
 Route::get('/category/{category}', [CategoryController::class, 'index']);
 Route::get('/article/{slug}', [ArticleController::class, 'index']);
