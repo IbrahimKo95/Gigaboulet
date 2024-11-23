@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gigaboulet Article</title>
+    <title>Gigaboulet - {{$article->title}}</title>
     <meta name="author" content="Gigaboulet">
     <meta name="description" content="Découvrez l'article '{{ $article->title }}' dans la catégorie {{ $article->category->name }}. Et apprenez en plus sur le sujet !">
     <script rel="preload" src="https://cdn.tailwindcss.com"></script>
@@ -61,11 +61,11 @@
                     Par <span class="font-bold" itemprop="author"> {{$article->author}} </span>, Publié le <time itemprop="datePublished" datetime="{{ $article->published_at }}">{{ $article->published_at }}</time>
                 </p>
             </header>
-                <h2 class="text-2xl font-bold pb-3">Introduction</h1>
+                <h2 class="text-2xl font-bold pb-3">Introduction</h2>
                 <p class="pb-3" itemprop="description">{{$article->introduction}}</p>
-                <h2 class="text-2xl font-bold pb-3">Heading</h1>
+                <h2 class="text-2xl font-bold pb-3">Heading</h2>
                 <p class="pb-3" itemprop="description">{{$article->developpement}}</p>
-                <h2 class="text-2xl font-bold pb-3">Conclusion</h1>
+                <h2 class="text-2xl font-bold pb-3">Conclusion</h2>
                 <p class="pb-3">{{$article->conclusion}}</p>
         </article>
 

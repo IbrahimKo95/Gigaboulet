@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gigaboulet</title>
+    <title>Gigaboulet - Le Blog des Révolutions Technologiques et Numériques</title>
     <meta name="author" content="Gigaboulet">
-    <meta name="description" content="Gigaboulet est votre blog dédié aux nouvelles technologies et innovations. Découvrez des articles sur l'intelligence artificielle, la cybersécurité, l'automobile et bien plus encore. Rejoignez notre communauté passionnée par l'avenir technologique.">
+    <meta name="description" content="Découvrez Gigaboulet, votre blog dédié à l'IA, la cybersécurité et aux innovations technologiques en tout genre. Rejoignez les passionnés du futur.">
     <script rel="preload" src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
