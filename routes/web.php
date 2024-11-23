@@ -12,3 +12,5 @@ Route::view('/a-propos', 'about');
 Route::get('/category/{category}', [CategoryController::class, 'index']);
 Route::get('/article/{slug}', [ArticleController::class, 'index']);
 Route::get('/sitemap.xml', [SitemapXmlController::class, 'index']);
+Route::get('/{category}', [CategoryController::class, 'index']);
+

@@ -2,25 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\Category;
 use Illuminate\View\View;
 
 class CategoryController extends Controller
 {
-    public function index($category): View
+    public function index($categoryName): View
     {
-        $category = str_replace("-", " ", $category);
-
-        $articles =  DB::table("article as a")
-            ->select("*")
-            ->join("category as c", "a.category_id", "=", "c.id")
-            // ->join("variant as v", "a.id", "=", "v.article_id")
-            ->where("c.name", "=", $category)
-            ->get();
-
+        $categoryName = str_replace("-", " ", $categoryName);
+        $category = Category::where('name', $categoryName)->first();
+        $articles = $category->article()->paginate(5); 
+ 
         return View("category", [
-            "category" => ucfirst($category),
+            "category" => ucfirst($categoryName),
             "articles" => $articles
         ]);
     }
