@@ -1,2 +1,3 @@
+Sitemap: https://gigaboulet.fr/sitemap.xml
 User-agent: *
 Disallow:
