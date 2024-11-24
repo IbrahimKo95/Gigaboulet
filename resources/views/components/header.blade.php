@@ -34,9 +34,11 @@
 <!-- Text Header -->
 <header class="w-full container mx-auto">
     <div class="flex flex-col items-center py-12">
-        <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="{{route('home')}}">
-            Gigaboulet
-        </a>
+        <h1>
+            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="{{route('home')}}">
+                Gigaboulet
+            </a>
+        </h1>
         <p class="px-3 text-center text-lg text-gray-600">
             Plongez au coeur de l'actualité technologique et des innovations.
         </p>
