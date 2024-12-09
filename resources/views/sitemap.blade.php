@@ -13,7 +13,7 @@
 
     @foreach ($articles as $article)
         <url>
-            <loc>{{ url('articles/' . $article->slug) }}</loc>
+            <loc>{{ url('article/' . $article->slug) }}</loc>
             <lastmod>{{ $article->updated_at->toAtomString() }}</lastmod>
             <priority>0.8</priority>
         </url>
