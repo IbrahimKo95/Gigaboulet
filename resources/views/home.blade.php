@@ -104,11 +104,6 @@
                 En savoir plus
             </a>
         </div>
-        <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-            <p class="text-xl font-semibold pb-5">Avis Utilisateurs</p>
-            <p class="pb-2">Bienvenue sur Gigaboulet, votre blog dédié aux nouvelles technologies et à l’innovation. Notre objectif est simple : vous offrir une plateforme où vous pouvez découvrir, explorer et comprendre les avancées technologiques qui façonnent notre monde.</p>
-        </div>
-
     </aside>
 
 </div>
