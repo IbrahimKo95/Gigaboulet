@@ -18,4 +18,11 @@
             <priority>0.8</priority>
         </url>
     @endforeach
+    @foreach ($categories as $category)
+        <url>
+            <loc>{{ url(str_replace(' ', '-', $category->name)) }}</loc>
+            <lastmod>2025-01-21T17:22:49+00:00</lastmod>
+            <priority>0.8</priority>
+        </url>
+    @endforeach
 </urlset>

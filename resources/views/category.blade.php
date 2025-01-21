@@ -8,7 +8,8 @@
     <script rel="preload" src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title>{{ $category }}</title>
+    <title>Gigaboulet - {{ $category }}</title>
+    <meta name="description" content="Explorez la catégorie '{{ $category }}' sur Gigaboulet, avec des articles intéressants sur les dernières tendances en technologie.">
 </head>
 
 <body class="bg-slate-100">

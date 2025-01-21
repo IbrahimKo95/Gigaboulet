@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gigaboulet - {{$article->title}}</title>
     <meta name="author" content="Gigaboulet">
-    <meta name="description" content="Découvrez l'article '{{ $article->title }}' dans la catégorie {{ $article->category->name }}. Et apprenez en plus sur le sujet !">
+    <meta name="description" content="Découvrez l'article '{{ $article->title }}' sur Gigaboulet. Et apprenez en plus sur le sujet !">
     <script rel="preload" src="https://cdn.tailwindcss.com"></script>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
