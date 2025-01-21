@@ -23,8 +23,8 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "{{$article->title}}",
-        "description": "{{$article->introduction}}",
+        "headline": "{{ e($article->title) }}",
+        "description": "{{ e($article->introduction) }}",
         "author": {
             "@type": "Person",
             "name": "Gigaboulet"
