@@ -31,7 +31,7 @@
         },
         "publisher": {
             "@type": "Organization",
-            "name": "Gigaboulet",
+            "name": "Gigaboulet"
         },
         "datePublished": "{{$article->published_at}}T08:00:00+00:00",
         "dateModified": "{{$article->published_at}}T09:00:00+00:00",
